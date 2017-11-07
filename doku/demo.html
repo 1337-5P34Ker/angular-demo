@@ -282,22 +282,40 @@ let circle = new Circle(5, 5, 3);
                     <h2>Properties</h2>
                     <pre><code class="hljs" data-trim contenteditable>
 class Circle {
- constructor(private x: number, private y: number, private r: number) {
+ constructor(private _x: number, private _y: number, private _r: number) {
  }
- get X(){ return this.x; }
+ get x(){ return this._x; }
 
- set X(value: number){
-  if(value < 0) { throw new Exception('so nicht, Freunde der Sonne'); }
-  this.x = value;
+ set x(value: number){
+  if(value < 0) 
+      throw new Exception('so nicht, Freunde der Sonne');
+
+  this._x = value;
  }
-}
-								
 let circle = new Circle(5, 5, 3);
-// circle.X = 7 -> alles gut
-// circle.X = -5 -> Exception: so nicht, Freunde der Sonne
+// circle.x = 7 -> alles gut
+// circle.x = -5 -> Exception: so nicht, Freunde der Sonne
  
 	</code></pre>
                 </section>
+
+                <section>
+                    <h2>Modules</h2>
+                    <pre><code class="hljs" data-trim contenteditable>
+// main.ts
+
+import { Circle } from './circle' // ohne .ts
+
+let circle = new Circle();
+               
+// circle.ts (im selben Ordner)
+
+export class Circle { // Schlüsselwort export
+  // ...
+}
+	</code></pre>
+                </section>
+
             </section>
 
             <section>
