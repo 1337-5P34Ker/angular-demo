@@ -319,21 +319,21 @@ export class Circle { // Schlüsselwort export
 
             </section>
 
-           
-                <section id="grundlagen">
-                    <h2>Angular Grundlagen</h2>
-                    <p>
-                        Angular besteht hauptsächlich aus
-                        <ul>
-                            <li>Components</li>
-                            <li>Templates</li>
-                            <li>Directives</li>
-                            <li>Services</li>
-                        </ul>
-                    </p>                   
-                </section>
-                <section id="components">
-                    <section>
+
+            <section id="grundlagen">
+                <h2>Angular Grundlagen</h2>
+                <p>
+                    Angular besteht hauptsächlich aus
+                    <ul>
+                        <li>Components</li>
+                        <li>Templates</li>
+                        <li>Directives</li>
+                        <li>Services</li>
+                    </ul>
+                </p>
+            </section>
+            <section id="components">
+                <section>
                     <h2>Components...</h2>
                     <p>... beinhalten das Markup, die Logik und die Daten für einen Webpart.</p>
                     <p>... müssen in einem Module registriert werden.</p>
@@ -343,10 +343,10 @@ export class Circle { // Schlüsselwort export
                     <pre><code class="hljs" data-trim contenteditable>
 ng g c './my-compoment [ -is (inline styles) -it (inline template)]
 	                </code></pre>
-                   </section>
-                    <section>
-                        <p>Beispiel einer Component:</p>
-                        <pre><code class="hljs" data-trim contenteditable>
+                </section>
+                <section>
+                    <p>Beispiel einer Component:</p>
+                    <pre><code class="hljs" data-trim contenteditable>
 @Component({ // Decorator mit Meta-Daten
  selector: 'my-component', // -> <my-component></my-component>
  template: '<h1>Hallo {{Person?.Name}}</h1>', // einzeilig mit 'Elvis' Operator
@@ -363,9 +363,55 @@ ng g c './my-compoment [ -is (inline styles) -it (inline template)]
 })
 export default class MyComponent {}
 	</code></pre>
-                    </section>
-             </section>
-           
+                </section>
+            </section>
+            <section id="Bindings">
+                <section>
+                    <h2>Bindings</h2>
+                    <p>
+                        Bei Bindings unterscheidet man:
+                        <ul>
+                            <li>Property Binding</li>
+                            <li>Event Binding</li>
+                            <li>Two-Way Binding</li>
+                        </ul>
+                    </p>
+                </section>
+                <section>
+                    <h2>[Property Bindings]:</h2>
+                    <p>Property Bindings werden in [] gesetzt und verweisen auf eine Property der Component oder ein Literal.</p>
+                    <p>Die Daten fließen aus der Komponente in die View und die Aktualisierung erfolgt automatisch.</p>
+                    <pre><code class="hljs" data-trim contenteditable>
+<a [href]="GoToLink">Link</a> // GoToLink ist eine Property der Component
+<a [href]="'http://www.ronami.de'">Link</a> // Literal
+	</code></pre>
+                </section>
+                <section>
+                    <h2>(Event Bindings):</h2>
+                    <p>Event Bindings werden in () gesetzt und verweisen auf eine Methode in der Component.</p>
+                    <p>Das Event fließt in die Component und ruft dort eine Methode auf.</p>
+                    <p>Die Events sind nicht auf die nativen Events eines DOM-Elements beschränkt, sondern können in der Component definiert werden.</p>
+                    <pre><code class="hljs" data-trim contenteditable>
+<button (click)="OnButtonClick()"> Klick mich </button> 
+ // OnButtonClick ist eine Methode der Component
+	</code></pre>
+                </section>
+                <section>
+                    <h2>[(Two-Way Bindings)]:</h2>
+                    <p>Neben 'lesenden' und 'schreibenden' unidirektionalen Bindings gibt es noch die bidirektionalen Bindings.</p>
+                    <p>Kleine Eselsbrücke: 'Das Runde muss ins Eckige'.</p>
+                    <p>Ist das Binding so deklariert, können die Werte aus der Component heraus als auch aufseiten der UI geändert werden.</p>
+                    <pre><code class="hljs" data-trim contenteditable>
+<input type="text" [(ngModel)]="FirstName">
+
+
+
+ // FirstName ist eine Property der Component
+	</code></pre>
+                </section>
+            </section>
+
+            
             <section>
                 <h2>Templates</h2>
                 <p>
