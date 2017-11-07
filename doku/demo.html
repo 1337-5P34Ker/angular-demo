@@ -252,7 +252,27 @@ this.r = r;
 
 let circle = new Circle(5, 5, 3);
 </code></pre>
-                    </section>
+					</section>
+					<section>
+						<h2>Access modifiers</h2>
+						<pre><code class="hljs" data-trim contenteditable>
+class Circle {
+ constructor(private x: number, public y: number, protected r: number) {
+ // private -> nur in der Klasse sichtbar
+ // protected -> nur in der Klasse und davon abgeleiteten Klassen sichtbar
+ // public (default) -> überall sichtbar
+ }
+ public draw(){
+  // ...
+ }
+}
+								
+let circle = new Circle(5, 5, 3);
+// circle.x -> Compiler error
+// circle.y -> alles gut
+// circle.draw() -> alles gut
+	</code></pre>
+						</section>
 	          </section>
 
 				<section>
