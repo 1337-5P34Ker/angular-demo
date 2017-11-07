@@ -125,7 +125,8 @@ ng serve</code></pre>
       "port": 4444,
       "host": "127.0.0.1"
     }</code></pre>
-                </section><section>
+                </section>
+                <section>
                     <p>Oder man ändert in der tslint.json die Validierungregeln für den Linter. <br>Eigentlich werden Components in kebab-case geschrieben und beginnen mit app.</p>
                     <pre><code class="hljs" data-trim contenteditable>
  "component-selector": [
@@ -152,7 +153,7 @@ ng serve</code></pre>
 
             <section>
                 <section>
-                    <h2>JS vs Typescript?</h2>
+                    <h2>JS vs. Typescript?</h2>
                     <p>
                         Typescript ist Javascript +
                         <ul>
@@ -318,31 +319,55 @@ export class Circle { // Schlüsselwort export
 
             </section>
 
+           
+                <section id="grundlagen">
+                    <h2>Angular Grundlagen</h2>
+                    <p>
+                        Angular besteht hauptsächlich aus
+                        <ul>
+                            <li>Components</li>
+                            <li>Templates</li>
+                            <li>Directives</li>
+                            <li>Services</li>
+                        </ul>
+                    </p>                   
+                </section>
+                <section id="components">
+                    <section>
+                    <h2>Components...</h2>
+                    <p>... beinhalten das Markup, die Logik und die Daten für einen Webpart.</p>
+                    <p>... müssen in einem Module registriert werden.</p>
+                    <p>... erkennt man am @Component() - Decorator.</p>
+                    <p>... stehen im Template anderer Komponenten.</p>
+                    <p>... lassen sich mit der Angular CLI erstellen.</p>
+                    <pre><code class="hljs" data-trim contenteditable>
+ng g c './my-compoment [ -is (inline styles) -it (inline template)]
+	                </code></pre>
+                   </section>
+                    <section>
+                        <p>Beispiel einer Component:</p>
+                        <pre><code class="hljs" data-trim contenteditable>
+@Component({ // Decorator mit Meta-Daten
+ selector: 'my-component', // -> <my-component></my-component>
+ template: '<h1>Hallo {{Person?.Name}}</h1>', // einzeilig mit 'Elvis' Operator
+// ODER:
+ template: `<h1>
+           Hallo {{Person?.Name}}
+          </h1>`, // mehrzeilig
+// ODER:
+ templateUrl: './my-component.html'
+
+ styles:[ 'h1 {font-size:1.5em}', 'h2 {font-size:1.2em}' ],
+// ODER:
+ styleUrls:['./styles.css', './custom.css'],
+})
+export default class MyComponent {}
+	</code></pre>
+                    </section>
+             </section>
+           
             <section>
-                <section id="fragments">
-                    <h2>Woraus besteht nun Angular?</h2>
-                    <p>Hit the next arrow...</p>
-                    <p class="fragment">... to step through ...</p>
-                    <p><span class="fragment">... a</span> <span class="fragment">fragmented</span> <span class="fragment">slide.</span></p>
-
-                    <aside class="notes">
-                        This slide has fragments which are also stepped through in the notes window.
-                    </aside>
-                </section>
-                <section>
-                    <h2>Fragment Styles</h2>
-                    <p>There's different types of fragments, like:</p>
-                    <p class="fragment grow">grow</p>
-                    <p class="fragment shrink">shrink</p>
-                    <p class="fragment fade-out">fade-out</p>
-                    <p class="fragment fade-up">fade-up (also down, left and right!)</p>
-                    <p class="fragment current-visible">current-visible</p>
-                    <p>Highlight <span class="fragment highlight-red">red</span> <span class="fragment highlight-blue">blue</span> <span class="fragment highlight-green">green</span></p>
-                </section>
-            </section>
-
-            <section id="transitions">
-                <h2>Transition Styles</h2>
+                <h2>Templates</h2>
                 <p>
                     You can select from different transitions, like: <br>
                     <a href="?transition=none#/transitions">None</a> -
@@ -354,8 +379,8 @@ export class Circle { // Schlüsselwort export
                 </p>
             </section>
 
-            <section id="themes">
-                <h2>Themes</h2>
+            <section>
+                <h2>Directives</h2>
                 <p>
                     reveal.js comes with a few themes built in: <br>
                     <!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
@@ -374,8 +399,8 @@ export class Circle { // Schlüsselwort export
             </section>
 
             <section>
-                <section data-background="#dddddd">
-                    <h2>Slide Backgrounds</h2>
+                <section>
+                    <h2>Services</h2>
                     <p>
                         Set <code>data-background="#dddddd"</code> on a slide to change the background color. All CSS color formats are supported.
                     </p>
