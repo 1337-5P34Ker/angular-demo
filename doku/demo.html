@@ -4,10 +4,10 @@
 <head>
     <meta charset="utf-8">
 
-    <title>reveal.js – The HTML Presentation Framework</title>
+    <title>Angular 2/4 Schnellstart powered by Rocco</title>
 
-    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-    <meta name="author" content="Hakim El Hattab">
+    <meta name="description" content="Wie funktioniert Angular 4?">
+    <meta name="author" content="Rocco Hundertmark">
 
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -31,7 +31,7 @@
     </script>
 
     <!--[if lt IE 9]>
-    <script src="lib/js/html5shiv.js"></script>
+        <script src="lib/js/html5shiv.js"></script>
     <![endif]-->
 </head>
 
@@ -44,12 +44,11 @@
             <section>
                 <h1>Angular 4</h1>
                 <h3>Schnelleinstieg</h3>
-
                 <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==" width="200" style="border-style:none; box-shadow:none">
             </section>
 
             <section>
-                <h2>Was ist Angular 4?</h2>
+                <h3>Was ist Angular 4?</h3>
                 <p>Angular 4 ist ein Open Source JS-Framework für die Erstellung von SPAs</p>
                 <ul>
                     <li>Veröffentlicht im März 2017 (Angular 4) </li>
@@ -60,28 +59,25 @@
                 <p>&nbsp;</p>
             </section>
 
-            <!-- Example of nested vertical slides -->
-            <section>
+
+            <section id="Vorbereitung">
                 <section>
                     <h2>Wie geht es los?</h2>
                     <p>Zunächst ist einiges zu installieren, um mit Angular zu beginnen.</p>
                     <p>&nbsp;</p>
-
-
                 </section>
                 <section>
                     <div class="nodejs-logo"></div>
                     Node.js ist eine plattformunabhängige serverseitige Javascript Laufzeitumgebung basierend auf Chromes V8 Rendering engine. Herunterzuladen unter: <a href="https://nodejs.org/de/" target="_blank">https://nodejs.org/de/</a> Bei der Installation unbedingt npm (den Paketmanager) mit installieren
-
-
-                </section>
+</section>
                 <section>
                     <h2>Angular CLI</h2>
                     <p>Mittels der Angular CLI kann man einfach ein Projekt erstellen und sehr viele Arbeitsschritte vereinfachen.</p><p>Installiert wird sie einfach mit dem gerade installierten Paketmanager.</p>
                     <pre><code class="hljs" data-trim contenteditable>
 npm install -g @angular/cli</code></pre>
-                    <br>
-                </section>
+                
+				</section>
+
                 <section>
                     <h2>Typescript</h2>
                     <p>TS ist ein Superset von Javascript. Also Javascript + Typisierung + Klassen + Vererbung + Interfaces + Tooling... powered by Microsoft<br>Wenn nicht ohnehin schon installiert, kann man es mit npm installieren.</p>
@@ -91,7 +87,8 @@ npm install -g typescript</code></pre>
                 </section>
             </section>
 
-            <section>
+            <section id="Projekt_anlegen">
+				<section>
                 <h2>Und wie geht es weiter?</h2>
                 <p>Dank Angular CLI ist es recht trivial ein neues Projekt zu erstellen.</p>
                 <pre><code class="hljs" data-trim contenteditable>
@@ -105,7 +102,8 @@ ng new &lt;projektname&gt;</code></pre>
                 </p>
 
                 <pre><code class="hljs" data-trim contenteditable>
-ng serve</code></pre>
+ng serve
+</code></pre>
             </section>
             <section>
                 <p>Gleich zu Beginn  erscheint in der Bash:</p>
@@ -114,8 +112,9 @@ ng serve</code></pre>
 </code></pre>
                 <p>Et voilá: Hat alles  geklappt, sieht das Ergebnis an Port 4200 etwa wie folgt aus.</p>
                 <p><img src="images/hello_world.png" width="500"></p>
-            </section>
-            <section>
+			</section>
+		</section>
+        <section id="Konfiguration">
                 <section>
                     <h2>Was nun weiter?</h2>
                     <p>Jetzt kann man die entstandenen Konfigurationsdateien anpassen. Zum Beispiel den Host oder den Port in der .angular.cli.json</p>
@@ -151,7 +150,7 @@ ng serve</code></pre>
                 </section>
             </section>
 
-            <section>
+            <section id="Typescript">
                 <section>
                     <h2>JS vs. Typescript?</h2>
                     <p>
@@ -169,7 +168,7 @@ ng serve</code></pre>
                     </p>
                 </section>
                 <section>
-                    <h2>Type annotations</h2>
+                    <h3>Type annotations</h3>
                     <pre><code class="hljs" data-trim contenteditable>
 // Javascript:
 var a = 5;
@@ -188,7 +187,7 @@ let backgroundColor = Color.Red; // Intellisense löst das Enum auf.
 </code></pre>
                 </section>
                 <section>
-                    <h2>Arrow functions</h2>
+                    <h3>Arrow functions</h3>
                     <pre><code class="hljs" data-trim contenteditable>
 // Javascript:
 var writeLogJS = function(param){
@@ -203,7 +202,7 @@ writeLogTS('text');
 </code></pre>
                 </section>
                 <section>
-                    <h2>Interfaces</h2>
+                    <h3h2>Interfaces</h3>
                     <pre><code class="hljs" data-trim contenteditable>
 interface ICircle {
 x: number;
@@ -222,7 +221,7 @@ drawCircle({
 </code></pre>
                 </section>
                 <section>
-                    <h2>Classes</h2>
+                    <h3>Classes</h3>
                     <pre><code class="hljs" data-trim contenteditable>
 class Circle {
 x: number;
@@ -242,7 +241,7 @@ circle.draw();
 </code></pre>
                 </section>
                 <section>
-                    <h2>Constructors</h2>
+                    <h3>Constructors</h3>
                     <pre><code class="hljs" data-trim contenteditable>
 class Circle {
 x: number;
@@ -260,7 +259,7 @@ let circle = new Circle(5, 5, 3);
 </code></pre>
                 </section>
                 <section>
-                    <h2>Access modifiers</h2>
+                    <h3>Access modifiers</h3>
                     <pre><code class="hljs" data-trim contenteditable>
 class Circle {
  constructor(private x: number, public y: number, protected r: number) {
@@ -280,7 +279,7 @@ let circle = new Circle(5, 5, 3);
 	</code></pre>
                 </section>
                 <section>
-                    <h2>Properties</h2>
+                    <h3>Properties</h3>
                     <pre><code class="hljs" data-trim contenteditable>
 class Circle {
  constructor(private _x: number, private _y: number, private _r: number) {
@@ -297,11 +296,10 @@ let circle = new Circle(5, 5, 3);
 // circle.x = 7 -> alles gut
 // circle.x = -5 -> Exception: so nicht, Freunde der Sonne
  
-	</code></pre>
+ </code></pre>
                 </section>
-
                 <section>
-                    <h2>Modules</h2>
+                    <h3>Modules</h3>
                     <pre><code class="hljs" data-trim contenteditable>
 // main.ts
 
@@ -314,12 +312,9 @@ let circle = new Circle();
 export class Circle { // Schlüsselwort export
   // ...
 }
-	</code></pre>
+ </code></pre>
                 </section>
-
             </section>
-
-
             <section id="grundlagen">
                 <h2>Angular Grundlagen</h2>
                 <p>
@@ -349,6 +344,11 @@ ng g c './my-compoment [ -is (inline styles) -it (inline template)]
                     <pre><code class="hljs" data-trim contenteditable>
 @Component({ // Decorator mit Meta-Daten
  selector: 'my-component', // -> <my-component></my-component>
+ // ODER:
+ selector: '.my-component', // -> <div class="my-component"></div>
+ // ODER:
+ selector: '#my-component', // -> <div id="my-component"></div>
+
  template: '<h1>Hallo {{Person?.Name}}</h1>', // einzeilig mit 'Elvis' Operator
 // ODER:
  template: `<h1>
@@ -361,7 +361,7 @@ ng g c './my-compoment [ -is (inline styles) -it (inline template)]
 // ODER:
  styleUrls:['./styles.css', './custom.css'],
 })
-export default class MyComponent {}
+export class MyComponent {}
 	</code></pre>
                 </section>
             </section>
@@ -404,44 +404,39 @@ export default class MyComponent {}
                     <pre><code class="hljs" data-trim contenteditable>
 <input type="text" [(ngModel)]="FirstName">
 
-
-
  // FirstName ist eine Property der Component
 	</code></pre>
                 </section>
             </section>
 
-            
+
             <section>
                 <h2>Templates</h2>
-                <p>
-                    You can select from different transitions, like: <br>
-                    <a href="?transition=none#/transitions">None</a> -
-                    <a href="?transition=fade#/transitions">Fade</a> -
-                    <a href="?transition=slide#/transitions">Slide</a> -
-                    <a href="?transition=convex#/transitions">Convex</a> -
-                    <a href="?transition=concave#/transitions">Concave</a> -
-                    <a href="?transition=zoom#/transitions">Zoom</a>
-                </p>
+                <p> Die Templates werden in HTML geschrieben und angereicht mit Directives und Interpolations.</p>
             </section>
 
             <section>
-                <h2>Directives</h2>
+				<section>
+                <h3>Directives</h3>
                 <p>
-                    reveal.js comes with a few themes built in: <br>
-                    <!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
-                    <a href="#" onClick="document.getElementById('theme').setAttribute('href','css/theme/black.css'); return false;">Black (default)</a> -
-                    <a href="#" onClick="document.getElementById('theme').setAttribute('href','css/theme/white.css'); return false;">White</a> -
-                    <a href="#" onClick="document.getElementById('theme').setAttribute('href','css/theme/league.css'); return false;">League</a> -
-                    <a href="#" onClick="document.getElementById('theme').setAttribute('href','css/theme/sky.css'); return false;">Sky</a> -
-                    <a href="#" onClick="document.getElementById('theme').setAttribute('href','css/theme/beige.css'); return false;">Beige</a> -
-                    <a href="#" onClick="document.getElementById('theme').setAttribute('href','css/theme/simple.css'); return false;">Simple</a> <br>
-                    <a href="#" onClick="document.getElementById('theme').setAttribute('href','css/theme/serif.css'); return false;">Serif</a> -
-                    <a href="#" onClick="document.getElementById('theme').setAttribute('href','css/theme/blood.css'); return false;">Blood</a> -
-                    <a href="#" onClick="document.getElementById('theme').setAttribute('href','css/theme/night.css'); return false;">Night</a> -
-                    <a href="#" onClick="document.getElementById('theme').setAttribute('href','css/theme/moon.css'); return false;">Moon</a> -
-                    <a href="#" onClick="document.getElementById('theme').setAttribute('href','css/theme/solarized.css'); return false;">Solarized</a>
-                </p>
+                    Es gibt 2 verschiedene Arten von Direktiven
+					<ul><li>Strukturdirektiven</li>
+					<li>Attributdirektiven</li></ul>
+                    Attributdirektiven verändern das Verhalten eines DOM-Elements.<br>
+                    Strukturdirektiven verändern das DOM der Website und starten mit einem *.
+				</p>
+			</section>
+			<section>
+                <pre><code class="hljs" data-trim contenteditable>
+<div *ngIf="condition">...</div>
+ <li *ngFor="let item of items">
+  {{item}}
+ </li>
+<div [ngSwitch]="switch">					
+ <span *ngSwitchCase="match"> trifft zu  </span>
+ <span *ngSwitchDefault="match"> eher nicht</span>
+</div>	
+			</code></pre>
             </section>
 
             <section>
