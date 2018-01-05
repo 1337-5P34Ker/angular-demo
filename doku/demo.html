@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>Angular 2/4 Schnellstart powered by Rocco</title>
+    <title>Angular 5 Schnellstart powered by Rocco</title>
 
     <meta name="description" content="Wie funktioniert Angular 4?">
     <meta name="author" content="Rocco Hundertmark">
@@ -478,6 +478,52 @@ export class HighlightDirective {
                     </p>
                     <pre><code class="hljs" data-trim contenteditable>
 ng g service books 
+			</code></pre>
+                </section>
+                <section>
+                   <h3>Aufbau eines Services</h3>
+                    <pre><code class="hljs" data-trim contenteditable>
+import { Book } from './shared/book';
+import { Thumbnail } from './shared/thumbnail';
+
+export class BooksService {
+
+  getBooks(){
+    return [
+      new Book(
+        '9783864903571',
+        'Angular',
+        ['Johannes Hoppe', 'Danny Koppenhagen', 'Ferdinand Malcher', 'Gregor Woiwode'],
+        new Date(2017, 3, 1),
+        'Grundlagen, fortgeschrittene Techniken und Best Practices mit TypeScript',
+        5,
+        [new Thumbnail('https://ng-buch.de/cover2.jpg', 'Buchcover')],
+        'Mit Angular setzen Sie auf ein modernes und modulares...'
+      )
+    ]; 
+  }
+  constructor() { }
+}
+
+			</code></pre>
+                </section>
+                
+                                <section>
+                   <h3>Einbau eines Services</h3>
+                   <p> Der Service ist eine Klasse ohne besonderen Decorator. Damit er einbaubar ist, muss er als Provider dem Modul bekannt gemacht und per Contructor-Injection der Component mitgegeben werden.
+                   </p>
+                    <pre><code class="hljs" data-trim contenteditable>
+// app.module.ts
+...
+  providers: [BooksService],
+  bootstrap: [AppComponent]
+})
+..
+// book-list.component.ts
+
+  constructor(bookService: BooksService){
+     this.books = bookService.getBooks();
+  } 
 			</code></pre>
                 </section>
                 

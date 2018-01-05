@@ -6,3 +6,7 @@
 \.vs/config/applicationhost\.config
 
 \.vs/angular-demo/v15/\.suo
+
+book-monkey/node_modules/
+
+node_modules/
