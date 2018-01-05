@@ -11,6 +11,7 @@ import { RedColoredDirective } from './red-colored.directive';
 
 // Routing
 import { AppRoutingModule } from './app-routing.module';
+import { BooksService } from 'app/books.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { AppRoutingModule } from './app-routing.module';
     HttpModule,
     AppRoutingModule,
   ],
-  providers: [],
+  providers: [BooksService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
