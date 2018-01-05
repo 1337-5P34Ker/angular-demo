@@ -7,11 +7,11 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { BookListComponent } from './book-list/book-list.component';
-import { RedColoredDirective } from './red-colored.directive';
+import { RedColoredDirective } from './directives/red-colored.directive';
 
 // Routing
 import { AppRoutingModule } from './app-routing.module';
-import { BooksService } from 'app/books.service';
+import { BooksService } from 'app/services/books.service';
 import { BookComponent } from './book/book.component';
 
 @NgModule({

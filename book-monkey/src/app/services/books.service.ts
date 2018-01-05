@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Book } from './shared/book';
-import { Thumbnail } from './shared/thumbnail';
+import { Book } from '../shared/book';
+import { Thumbnail } from '../shared/thumbnail';
 
 @Injectable()
 export class BooksService {
