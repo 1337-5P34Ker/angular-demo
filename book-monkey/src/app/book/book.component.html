@@ -1,4 +1,4 @@
-<div class="ui divided items">
+<div class="ui divided items" *ngIf="!isLoading; else loading">
  <div class="item">
     <img class="image"
          *ngIf="book.thumbnails"
@@ -17,18 +17,7 @@
     </div>
   </div>
 </div>
-<!--
-<ul>
-  <li>{{ book.isbn}}</li>
-  <li>{{ book.title}}</li>
-  <li>{{ book.authors}}</li>
-  <li>{{ book.published | date: 'mediumDate'}}</li>
-  <li>{{ book.subtitle}}</li>
-  <li>{{ book.rating}}</li>
-  <li>{{ book.thumbnails.length}}</li>
-  <li>{{ book.description}}</li>
-</ul>
--->
+<ng-template #loading>loading...</ng-template>
 
 
 

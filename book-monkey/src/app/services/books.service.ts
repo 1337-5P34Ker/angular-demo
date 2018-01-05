@@ -1,43 +1,36 @@
+import { Book } from './../shared/book';
 import { Injectable } from '@angular/core';
-import { Book } from '../shared/book';
+import { Http } from '@angular/http';
 import { Thumbnail } from '../shared/thumbnail';
+
 
 @Injectable()
 export class BooksService {
 
-  books: Book[] = [
-    new Book(
-      '9783864903571',
-      'Angular',
-      ['Johannes Hoppe', 'Danny Koppenhagen', 'Ferdinand Malcher', 'Gregor Woiwode'],
-      new Date(2017, 3, 1),
-      'Grundlagen, fortgeschrittene Techniken und Best Practices mit TypeScript - ab Angular 4, inklusive NativeScript und Redux',
-      5,
-      [new Thumbnail('https://ng-buch.de/cover2.jpg', 'Buchcover')],
-      'Mit Angular setzen Sie auf ein modernes und modulares...'
-    ),
-    new Book(
-      '9783864901546',
-      'AngularJS',
-      ['Philipp Tarasiewicz', 'Robin Böhm'],
-      new Date(2014, 5, 29),
-      'Eine praktische Einführung',
-      5,
-      [new Thumbnail('https://ng-buch.de/cover1.jpg', 'Buchcover')],
-      'Dieses Buch führt Sie anhand eines zusammenhängenden Beispielprojekts...'
-    )
-  ]; 
+ baseURI:string = "http://localhost/"; // die books.json liegt bei mir im lokalen IIS
+
+ constructor(private http:Http) {
+ }
 
   // alle Bücher
-  getBooks(){
-    return this.books;
+  getBooks(): Promise<Book[]>{
+    return new Promise<Book[]>((resolve, reject) => {      
+      const apiURL = `${this.baseURI}books.json`;
+      this.http.get(apiURL)
+        .toPromise()
+        .then(response => resolve(response.json() as Book[]))
+        .catch(error =>reject(error));
+    });
   }
-
   // bestimmtes Buch
-  getBook(isbn: string){
-    return this.books.find(book => book.isbn === isbn);
+  getBook(isbn: string): Promise<Book>{
+
+    return new Promise<Book>((resolve, reject) => {      
+      const apiURL = `${this.baseURI}books.json`;
+      this.http.get(apiURL)
+        .toPromise()
+        .then(response => resolve(response.json().find(book => book.isbn === isbn) as Book))
+        .catch(error =>reject(error));
+    });
   }
-
-  constructor() { }
-
 }

@@ -12,14 +12,17 @@ export class BookComponent implements OnInit {
 
   private sub: any;
   isbn: string;
-  book: Book;
-  
+  book: Book;  
+  isLoading: boolean = true;
   constructor(private route: ActivatedRoute, private bookService: BooksService) { }
 
   ngOnInit() {
     this.sub = this.route.params.subscribe(params => {
       this.isbn = params['id'];
-      this.book = this.bookService.getBook(this.isbn);
+      this.bookService.getBook(this.isbn).then((result) =>{
+        this.book = result;
+        this.isLoading = false;
+      });
    });
   }
 
