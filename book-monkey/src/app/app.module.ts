@@ -12,12 +12,14 @@ import { RedColoredDirective } from './red-colored.directive';
 // Routing
 import { AppRoutingModule } from './app-routing.module';
 import { BooksService } from 'app/books.service';
+import { BookComponent } from './book/book.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BookListComponent,
-    RedColoredDirective
+    RedColoredDirective,
+    BookComponent
   ],
   imports: [
     BrowserModule,
