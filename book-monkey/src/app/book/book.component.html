@@ -16,7 +16,7 @@
         </span>
       </div>
       <div class="extra">ISBN: {{ book.isbn }}<br>
-      Bewertung: {{ book.rating }}<br>
+      Bewertung:<bm-rating [rating]="book.rating"></bm-rating><br>
       erschienen: {{ book.published | date: 'mediumDate'}}</div>
     </div>
   </div>
