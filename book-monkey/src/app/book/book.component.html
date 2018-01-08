@@ -1,8 +1,12 @@
+<p><a routerLink="/books">Bücherliste</a></p>
 <div class="ui divided items" *ngIf="!isLoading; else loading">
  <div class="item">
-    <img class="image"
+  <!--
+  <img class="image"
          *ngIf="book.thumbnails"
          [src]="book.thumbnails[0].url" style="width:10%; height:10%">
+ -->
+         <img class="image" style="width:10%; height:10%" src="http://via.placeholder.com/400x500">
     <div class="content">
       <div class="header">{{ book.title }}</div>
       <div class="description"> {{ book.subtitle }} </div>

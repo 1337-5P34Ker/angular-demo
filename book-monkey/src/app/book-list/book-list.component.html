@@ -1,8 +1,11 @@
 <div class="ui middle aligned selection divided list">
   <a *ngFor="let book of books" class="item" [routerLink]="['/book', book.isbn]" >
+    <!--
     <img class="ui tiny image"
          *ngIf="book.thumbnails"
          [src]="book.thumbnails[0].url">
+    -->
+         <img class="ui tiny image" src="http://via.placeholder.com/275x340">
     <div class="content">
       <div class="header">{{ book.title }}</div>
       <div class="description"> {{ book.subtitle }} </div>

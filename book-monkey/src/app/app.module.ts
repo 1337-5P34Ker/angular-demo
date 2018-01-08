@@ -13,13 +13,17 @@ import { RedColoredDirective } from './directives/red-colored.directive';
 import { AppRoutingModule } from './app-routing.module';
 import { BooksService } from 'app/services/books.service';
 import { BookComponent } from './book/book.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BookListComponent,
     RedColoredDirective,
-    BookComponent
+    BookComponent,
+    NotFoundComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
