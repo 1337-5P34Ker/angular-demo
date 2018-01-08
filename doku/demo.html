@@ -1,19 +1,15 @@
 ﻿<!doctype html>
-<html lang="en">
+<html lang="de">
 
 <head>
     <meta charset="utf-8">
 
     <title>Angular 5 Schnellstart powered by Rocco</title>
-
-    <meta name="description" content="Wie funktioniert Angular 4?">
+    <meta name="description" content="Wie funktioniert Angular 5?">
     <meta name="author" content="Rocco Hundertmark">
-
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
     <link rel="stylesheet" href="css/reveal.css">
     <link rel="stylesheet" href="css/theme/solarized.css" id="theme">
     <link rel="stylesheet" href="css/custom.css">
@@ -42,24 +38,21 @@
         <!-- Any section element inside of this container is displayed as a slide -->
         <div class="slides">
             <section>
-                <h1>Angular 4</h1>
+                <h1>Angular 5</h1>
                 <h3>Schnelleinstieg</h3>
                 <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==" width="200" style="border-style:none; box-shadow:none">
             </section>
-
             <section>
-                <h3>Was ist Angular 4?</h3>
-                <p>Angular 4 ist ein Open Source JS-Framework für die Erstellung von SPAs</p>
+                <h3>Was ist Angular 5?</h3>
+                <p>Angular 5 ist ein Open Source JS-Framework für die Erstellung von SPAs</p>
                 <ul>
-                    <li>Veröffentlicht im März 2017 (Angular 4) </li>
+                    <li>Veröffentlicht im März 2017 (Angular 5) </li>
                     <li>Aktuelle Version 5 veröffentlicht am 23.10.2017</li>
                     <li>powered by Google</li>
                     <li>Wird sowohl in Web- als auch in plattformübergreifenden Desktop-Anwendungen verwendet.</li>
                 </ul>
                 <p>&nbsp;</p>
             </section>
-
-
             <section id="Vorbereitung">
                 <section>
                     <h2>Wie geht es los?</h2>
@@ -75,9 +68,7 @@
                     <p>Mittels der Angular CLI kann man einfach ein Projekt erstellen und sehr viele Arbeitsschritte vereinfachen.</p><p>Installiert wird sie einfach mit dem gerade installierten Paketmanager.</p>
                     <pre><code class="hljs" data-trim contenteditable>
 npm install -g @angular/cli</code></pre>
-
                 </section>
-
                 <section>
                     <h2>Typescript</h2>
                     <p>TS ist ein Superset von Javascript. Also Javascript + Typisierung + Klassen + Vererbung + Interfaces + Tooling... powered by Microsoft<br>Wenn nicht ohnehin schon installiert, kann man es mit npm installieren.</p>
@@ -86,7 +77,6 @@ npm install -g typescript</code></pre>
                     <br>
                 </section>
             </section>
-
             <section id="Projekt_anlegen">
                 <section>
                     <h2>Und wie geht es weiter?</h2>
@@ -94,13 +84,11 @@ npm install -g typescript</code></pre>
                     <pre><code class="hljs" data-trim contenteditable>
 ng new &lt;projektname&gt;</code></pre>
                 </section>
-
                 <section>
                     <p>
-                        Damit ist das Hello World der Angular 4 Welt auch schon fertig. <br>
+                        Damit ist das Hello World der Angular 5 Welt auch schon fertig. <br>
                         Zur Kontrolle kann man schon einmal den Node.js Webserver starten um sich sein Hello World anzusehen. Dazu einfach in den Ordner wechseln und den Server starten mittels.
                     </p>
-
                     <pre><code class="hljs" data-trim contenteditable>
 ng serve
 </code></pre>
@@ -149,7 +137,6 @@ ng serve
     "target": "es5", // oder z.B. es6</code></pre>
                 </section>
             </section>
-
             <section id="Typescript">
                 <section>
                     <h2>JS vs. Typescript?</h2>
@@ -202,9 +189,8 @@ writeLogTS('text');
 </code></pre>
                 </section>
                 <section>
-                    <h3h2>
-                        Interfaces</h3>
-                        <pre><code class="hljs" data-trim contenteditable>
+                    <h3>Interfaces</h3>
+                    <pre><code class="hljs" data-trim contenteditable>
 interface ICircle {
 x: number;
 y: number;
@@ -321,16 +307,17 @@ export class Circle { // Schlüsselwort export
                 <p>
                     Angular besteht hauptsächlich aus
                     <ul>
-                        <li>Components</li>
-                        <li>Templates</li>
-                        <li>Directives</li>
-                        <li>Services</li>
+                        <li><a href="#components">Components</a></li>
+                        <li><a href="#templates">Templates</a></li>
+                        <li><a href="#directives">Directives</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#routing">...Routing</a></li>
                     </ul>
                 </p>
             </section>
             <section id="components">
                 <section>
-                    <h2>Components...</h2>
+                    <h2 id="components">Components...</h2>
                     <p>... beinhalten das Markup, die Logik und die Daten für einen Webpart.</p>
                     <p>... müssen in einem Module registriert werden.</p>
                     <p>... erkennt man am @Component() - Decorator.</p>
@@ -411,19 +398,27 @@ export class MyComponent {}
 
 
 
+
+
+
+
+
+
+
+
  // FirstName ist eine Property der Component
 	</code></pre>
                 </section>
             </section>
 
 
-            <section>
+            <section id="templates">
                 <h2>Templates</h2>
                 <p> Die Templates werden in HTML geschrieben und angereicht mit Directives und Interpolations.</p>
             </section>
 
             <section>
-                <section>
+                <section id="directives">
                     <h3>Directives</h3>
                     <p>
                         Es gibt 2 verschiedene Arten von Direktiven
@@ -471,7 +466,7 @@ export class HighlightDirective {
                 </section>
             </section>
             <section>
-                <section>
+                <section id="services">
                     <h3>Services</h3>
                     <p>
                         Components kümmern sich nur um die Anzeigelogik, während Services dafür zuständig sind, die Daten zu liefern oder zu verarbeiten
@@ -481,7 +476,7 @@ ng g service books
 			</code></pre>
                 </section>
                 <section>
-                   <h3>Aufbau eines Services</h3>
+                    <h3>Aufbau eines Services</h3>
                     <pre><code class="hljs" data-trim contenteditable>
 import { Book } from './shared/book';
 import { Thumbnail } from './shared/thumbnail';
@@ -507,11 +502,12 @@ export class BooksService {
 
 			</code></pre>
                 </section>
-                
-                                <section>
-                   <h3>Einbau eines Services</h3>
-                   <p> Der Service ist eine Klasse ohne besonderen Decorator. Damit er einbaubar ist, muss er als Provider dem Modul bekannt gemacht und per Contructor-Injection der Component mitgegeben werden.
-                   </p>
+
+                <section>
+                    <h3>Einbau eines Services</h3>
+                    <p>
+                        Der Service ist eine Klasse ohne besonderen Decorator. Damit er einbaubar ist, muss er als Provider dem Modul bekannt gemacht und per Constructor-Injection der Component mitgegeben werden.
+                    </p>
                     <pre><code class="hljs" data-trim contenteditable>
 // app.module.ts
 ...
@@ -526,23 +522,68 @@ export class BooksService {
   } 
 			</code></pre>
                 </section>
-                
-                
-                
-                <section data-background="http://i.giphy.com/90F8aUepslB84.gif">
-                    <h2>... probieren wir die DEMO!</h2>
-                    <a href="https://github.com/book-monkey2-build">GitHub</a> <br>
-                    <a href="https://github.com/angular-buch/book-monkey2.git">GitHub</a>
-                    
+            </section>
+            <section id="routing">
+                <section>
+                    <h3>Routing</h3>
+                    <p>Um Routing zu unterstützen muss man</p>
+                    <ul>
+                        <li>Routing implementieren und Routen konfigurieren</li>
+                        <li>Router-Outlet hinzufügen</li>
+                        <li>besondere Links verwenden</li>
+                    </ul>
                 </section>
+                <section>
+                    <h3>Routing implementieren</h3>
+                    <p>
+                        Zunächst wird RouterModule importiert und dann werden Routen konfiguriert.
+                    </p>
+                    <pre><code class="hljs" data-trim contenteditable>
+    // app.module.ts oder eigenes Modul für mehr übersicht
+    import { RouterModule, Routes } from '@angular/router';
+
+    // Routen
+    const routes: Routes = [{ 
+      path: 'books', // URL
+      component: BookListComponent // Component },
+      {
+      path: 'book/:id',
+      component: BookComponent
+    }];
+
+    @NgModule({
+    imports: [RouterModule.forRoot(routes)],
+    })
+</code></pre>
+                </section>
+
+                
+                <section>
+                    <h3>Links in Components einbauen</h3>
+                    <pre><code class="hljs" data-trim contenteditable>
+    // RouterLink - Directive OHNE Paramter
+    <a routerLink="/books">...</a>
+
+    // RouterLink als Property-Binding MIT Parameter
+    <a *ngFor="let book of books" [routerLink]="['/book', book.isbn]">...</a> 
+    // => book/123456789
+
+    // RouterLink als Property-Binding mit n Query-Parametern
+    <a [routerLink]="['/book']" [queryParams]="{isbn: book.isbn, view: 'details'}">...</a>
+    // => book?isbn=123456789&view=details
+
+</code></pre>
+                </section>
+
             </section>
 
-            
 
-         
-
+            <section data-background="http://i.giphy.com/90F8aUepslB84.gif">
+                <h2>... probieren wir die DEMO!</h2>
+                <a href="https://github.com/book-monkey2-build">GitHub</a> <br>
+                <a href="https://github.com/angular-buch/book-monkey2.git">GitHub</a>
+            </section>
         </div>
-
     </div>
 
     <script src="lib/js/head.min.js"></script>
