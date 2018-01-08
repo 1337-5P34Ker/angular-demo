@@ -2,7 +2,7 @@ import { Thumbnail } from './thumbnail';
 
 export class Book {
   constructor(
-    public isbn: string,
+    public isbn: number,
     public title: string,
     public authors: string[],
     public published: Date,

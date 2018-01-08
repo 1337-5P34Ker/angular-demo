@@ -11,14 +11,14 @@ import { BooksService } from 'app/services/books.service';
 export class BookComponent implements OnInit {
 
   private sub: any;
-  isbn: string;
+  isbn: number;
   book: Book;  
   isLoading: boolean = true;
   constructor(private route: ActivatedRoute, private bookService: BooksService) { }
 
   ngOnInit() {
-    this.sub = this.route.params.subscribe(params => {
-      this.isbn = params['id'];
+    this.sub = this.route.paramMap.subscribe(params => {
+      this.isbn = +params.get('isbn'); // + converts string into number
       this.bookService.getBook(this.isbn).then((result) =>{
         this.book = result;
         this.isLoading = false;

@@ -1,6 +1,6 @@
 [
   {
-    "isbn": "9783864903571",
+    "isbn": 9783864903571,
     "title": "Angular",
     "authors": [
       "Johannes Hoppe",
@@ -20,7 +20,7 @@
     "description": "Mit Angular setzen Sie auf ein modernes und modulares..."
   },
   {
-    "isbn": "9783864901546",
+    "isbn": 9783864901546,
     "title": "AngularJS",
     "authors": [
       "Philipp Tarasiewicz",

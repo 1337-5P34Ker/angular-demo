@@ -16,7 +16,7 @@ const routes: Routes = [
         path: 'books',
         component: BookListComponent, pathMatch: 'full'
     },{
-      path: 'book/:id',
+      path: 'book/:isbn',
       component: BookComponent, pathMatch: 'full'
     }    
     ,{

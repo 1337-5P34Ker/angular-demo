@@ -23,7 +23,7 @@ export class BooksService {
     });
   }
   // bestimmtes Buch
-  getBook(isbn: string): Promise<Book>{
+  getBook(isbn: number): Promise<Book>{
 
     return new Promise<Book>((resolve, reject) => {      
       const apiURL = `${this.baseURI}books.json`;
