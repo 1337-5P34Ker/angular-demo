@@ -30,4 +30,9 @@ export class BookComponent implements OnInit {
   ngOnDestroy() {
     this.sub.unsubscribe();
   }
+
+  notify(rating: number){
+    this.book.rating = rating;
+    console.log('speichere neues Rating: ' + rating);
+  }
 }

@@ -1,5 +1,5 @@
 <span class="ui star rating"> 
-        <ng-container *ngFor="let star of stars">      
-        <i [ngClass]="{'icon': true, 'active' : star}"></i>
+        <ng-container *ngFor="let star of stars; let i = index">      
+        <i [ngClass]="{'icon': true, 'active' : star}" (click)="onRating(i)"></i>
         </ng-container>  
   </span>

@@ -13,7 +13,7 @@
         </span>
       </div>
       <div class="extra">ISBN: {{ book.isbn }}<br>
-      Bewertung:<bm-rating [rating]="book.rating"></bm-rating><br>
+      Bewertung:<bm-rating [rating]="book.rating" (rated)="notify($event)"></bm-rating><br>
       erschienen: {{ book.published | date: 'mediumDate'}}</div>
     </div>
   </div>
